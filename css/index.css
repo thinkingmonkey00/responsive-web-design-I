@@ -46,10 +46,9 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+body {
     font-family: 'Titillium Web', sans-serif;
-    width: 900px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -60,23 +59,27 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+header {
+    width: 100%;
+    margin: 0 auto;
+}
 .nav-wrapper {
     display: flex;
     justify-items: stretch;
 }
 .main-nav {
     width: 100%;
+    margin: 0 auto;
     padding-top: 20px;
     text-align: center;
     display: flex;
-    justify-items: stretch;
-    justify-content: space-evenly;
+    justify-items: center;
 }
 
 .main-nav a {
+    padding: 0 2.75rem;
     text-decoration: none;
     color: gray;
-    padding: 10px 12px;
     border-bottom: 2px solid transparent;
     transition: border-bottom .5s ease-in-out;
 }
@@ -85,39 +88,45 @@ h1, h2, h3, h4, h5 {
     border-bottom: 2px solid gray;
 }
 
-header {
-    margin-top: 60px;
-    margin-bottom: 100px;
-}
-
-header .main-header, header img {
-    display: inline-block;
-}
-
 .main-header {
-    padding-top: 70px;
-    font-size: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: stretch;
+}
+
+.main-header .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+
+}
+
+.box h1.slogan {
+    font-family: 'Bangers', cursive;
     text-align: center;
-    width: 49.9%;
+    font-size: 5rem;
+    
 }
 
-.main-header .slogan {
-    padding: 0 30px;
-    font-family: 'Righteous', cursive;
-}
-
-.main-header button {
-    vertical-align: top;
-    padding: 5px 30px;
+.box button {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px 20px;
     color: black;
     background: white;
     border: 1px solid black;
 }
 
-header img {
-    float: right;
-    width: 50;
-    border-radius: 190px;
+.main-header .box {
+    padding: 1.5rem;
+}
+
+.main-header .box img {
+    height: auto;
+    width: 100%;
+    border-radius: 230px;
     box-shadow: 0 20px 30px gray;
 }
 
@@ -133,6 +142,8 @@ header img {
 
 .middle-img {
     box-shadow: 0 8px 12px gray;
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .bottom-content {
@@ -162,19 +173,44 @@ footer address p {
 /* Tablet max width */
 
 @media (max-width: 800px) {
-    body {
-        width: 100%;
-    }
     .nav-wrapper {
-        width: 100vw;
+        width: 100%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-items: center;
     }
+    .nav-wrapper .logo {
+        padding-top: 1.75rem;
+        width: 180px;
+    }
     .main-nav {
+        padding-top: 2.75rem; 
+        margin: 0 auto;
         width: 100%;
         display: flex;
-        justify-items: stretch;
-        justify-content: center
+        justify-items: center;
+        justify-content: space-around;
+    }
+    .main-header {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .main-header .box {
+        width: 50%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin: 0 auto;
+    }
+    .box .slogan {
+        padding: 1.5rem;
+        text-align: center;
+        
+    }
+    .main-header .box img {
+        display: none;
     }
 } 
