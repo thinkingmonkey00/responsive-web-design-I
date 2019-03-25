@@ -251,7 +251,7 @@ footer .contact-info {
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
-        padding-bottom: 29px;
+        padding-bottom: 10px;
     }
     .box .slogan {
         padding: 1.5rem;
@@ -268,12 +268,20 @@ footer .contact-info {
         background: white;
         border: 1px solid black;
     }
+    .top-content {
+        flex-direction: column;
+        margin: 1rem;
+        margin-left: 1.5
+        
+    }
+    .top-content .box {
+        width: 100%;
+        padding-top: 1rem;
+    }
     
     /* 
     
-    .main-header .box img {
-        display: none;
-    }
+
     .top-content {
         border-top: 1px solid black;
         padding-top: 40px;
