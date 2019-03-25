@@ -60,24 +60,16 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 header {
-    width: 100%;
     margin: 0 auto;
-}
-.nav-wrapper {
-    display: flex;
-    justify-items: stretch;
 }
 .main-nav {
-    width: 100%;
-    margin: 0 auto;
     padding-top: 20px;
-    text-align: center;
     display: flex;
-    justify-items: center;
+
 }
 
 .main-nav a {
-    padding: 0 2.75rem;
+    padding: 0 40px;
     text-decoration: none;
     color: gray;
     border-bottom: 2px solid transparent;
@@ -89,7 +81,6 @@ header {
 }
 
 .main-header {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-items: stretch;
@@ -107,6 +98,8 @@ header {
     font-family: 'Bangers', cursive;
     text-align: center;
     font-size: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     
 }
 
@@ -174,24 +167,18 @@ footer address p {
 
 @media (max-width: 800px) {
     .nav-wrapper {
-        width: 100%;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-items: center;
+
     }
     .nav-wrapper .logo {
         padding-top: 1.75rem;
         width: 180px;
+        margin: 0 auto;
     }
     .main-nav {
         padding-top: 2.75rem; 
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        justify-items: center;
-        justify-content: space-around;
+
     }
     .main-header {
         margin: 0 auto;
@@ -199,15 +186,10 @@ footer address p {
         align-items: center;
         padding-top: 20px;
     }
-    .main-header .box {
-        width: 50%;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        margin: 0 auto;
-    }
     .box .slogan {
         padding: 1.5rem;
         text-align: center;
+        line-height: 4rem;
         
     }
     .main-header .box img {
