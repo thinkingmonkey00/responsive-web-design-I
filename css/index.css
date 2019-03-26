@@ -1,316 +1,262 @@
-/* /* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+	display: block;
 }
 
 body {
-    line-height: 1;
+	line-height: 1;
+	/* background: red; */
 }
 
 ol, ul {
-    list-style: none;
+	list-style: none;
 }
 
 blockquote, q {
-    quotes: none;
+	quotes: none;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body {
-    font-family: 'Titillium Web', sans-serif;
-    max-width: 1140px;
-    margin: 0 auto;
+html, body {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
 
-/* Your code starts here! */
+/* Mobile First */
+
 header {
-    margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
-img.logo {
-    width: 183px;
-    height: auto;
-    margin: 0 auto;
+.nav-wrapper {
+	display: flex;
+	flex-direction: column;
 }
-.main-nav {
-    padding-top: 20px;
-    display: flex;
-}
-
-.main-nav a {
-    padding: 0 40px;
-    text-decoration: none;
-    color: gray;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom .5s ease-in-out;
+.nav-wrapper .nav-logo {
+	margin: 0 auto;
+	text-align: center;
+	padding: 2rem 3rem;
 }
 
-.main-nav a:hover {
-    border-bottom: 2px solid gray;
+.nav-wrapper .main-nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0 2rem;
 }
 
-.main-header {
-    display: flex;
-    align-items: center;
-    justify-items: stretch;
+.nav-wrapper .main-nav a {
+	text-align: center;
+	text-decoration: none;
+	color: darkgrey;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	border-top: 1px solid gray;
 }
 
-.main-header .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-
+.nav-wrapper .main-nav a:last-child {
+	border-bottom: 1px solid gray;
 }
 
-.box h1.slogan {
-    font-family: 'Bangers', cursive;
-    text-align: center;
-    font-size: 5rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    
+header .main-header {
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 5rem;
 }
 
-.box button {
-    margin: 0 auto;
-    width: 50%;
-    padding: 10px 20px;
-    color: black;
-    background: white;
-    border: 1px solid black;
+header .main-header .slogan button {
+	/* margin-top: 0; */
+	padding: 0.75rem;
+	width:40%;
+	background: white;
+	color: black;
+	border-radius: 5px;
+	border: 1px solid black;
 }
 
-.main-header .box {
-    padding: 1rem;
+header .main-header .header-img {
+	display: none;
 }
 
-.main-header .box img {
-    height: auto;
-    width: 100%;
-    border-radius: 230px;
-    box-shadow: 0 20px 30px gray;
+main .top-content, main .bottom-content {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0.5rem;
 }
 
-.top-content {
-    border-top: 1px solid black;
-    padding: 46px 10px;
-    display: flex;
+main .top-content .box, .bottom-content .box {
+	padding: 1rem;
 }
 
-.top-content .box {
-    width: 50%;
+main .top-content .box:first-child {
+	padding-top: 2rem;
+	border-top: 2px solid black;
 }
 
-.middle-img {
-    display: flex;
-    box-shadow: 0 8px 12px gray;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
+main .middle-img {
+	width: 90vw;
+	margin: 0 auto;
 }
-
+main .middle-img img {
+	width: 100%;
+	height: 100%;
+	
+}
 .bottom-content {
-    border-bottom: 1px solid black;
-    padding-top: 30px;
-    padding-bottom: 70px;
-    display: flex;
+	display: flex;
+	flex-direction: column;
 }
-
-.bottom-content .box {
-    width: 33%;
-    padding: 0 10px;
+.bottom-content .box:last-child {
+	padding-bottom: 2rem;
+	border-bottom: 2px solid black;
 }
 
 footer {
-    padding-top: 30px;
-}
-
-footer .contact-info {
-    padding-top: 5px;
-    padding-left: 10px;
+	padding: 2rem;
 }
 
 .legal p {
-    margin: 40px 0;
-    text-align: center;
+	padding: 2rem;
+	margin: 0 auto;
+	text-align: center;
 }
 
-/* Tablet max width */
+/* Tablet Sizing */
 
-@media (max-width: 800px) {
-    .nav-wrapper {
-        display: flex;
-        flex-direction: column;
+@media(min-width: 760px) {
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+	header .nav-wrapper {
+		flex-direction: column;
+	}
+	.nav-wrapper .main-nav {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	header .nav-wrapper .main-nav a {
+		text-align: center;
+		text-decoration: none;
+		color: darkgrey;
+		font-size: 1.5rem;
+		padding: 2rem 1rem;
+		border-top: none;
+	}
+	header .nav-wrapper .main-nav a:last-child {
+		border-bottom: none;
+	}
+	header .main-header {
+		min-width: 501px;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	header .main-header .slogan button {
+		width: 20%;
+	}
+	main .top-content, main .bottom-content {
+		flex-direction: row;
+		padding: 1rem 0.5rem;
+		margin: 0 1rem;
+	}
+	main .top-content .box:first-child {
+		border-top: none;
+	}
+	main .top-content {
+		border-top: 2px solid black;
+	}
+	main .bottom-content .box:last-child {
+		border-bottom: none;
+	}
+	main .bottom-content {
+		border-bottom: 2px solid black;
+	}
+}
 
-    }
-    .nav-wrapper .logo {
-        padding-top: 1.75rem;
-        width: 180px;
-        margin: 0 auto;
-    }
-    .main-nav {
-        padding-top: 2.75rem; 
+/* Desktop sizing */
 
-    }
-    .main-header {
-        margin: 0 auto;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-        padding-bottom: 29px;
-    }
-    .box .slogan {
-        padding: 1.5rem;
-        text-align: center;
-        line-height: 4rem;
-        
-    }
-    .main-header .box img {
-        display: none;
-    }
-    .top-content {
-        border-top: 1px solid black;
-        padding-top: 40px;
-        padding-bottom: 54px;
-        display: flex;
-    }
-    .middle-img {
-        box-shadow: 0 8px 12px gray;
-        max-width: 760px;
-        margin: 0 auto;
-    }
-} 
-
-/* mobile max width */
-
-@media (max-width: 500px) {
-    .nav-wrapper {
-        display: flex;
-        flex-direction: column;
-
-    }
-    .nav-wrapper .logo {
-        padding-top: 1.5rem;
-        margin: 0 auto;
-        padding-bottom: 0.5rem;
-    }
-    .main-nav {
-        padding-top: 1rem; 
-        flex-direction: column;
-    }
-    .main-nav a {
-        padding-top: 1.25rem;
-        padding-bottom: 1.2rem;
-        text-align: center;
-        border-top: 0.5px solid black;
-        font-size: 1.2rem;
-        color: gray;
-        font-weight: 700;
-    }
-    .main-nav a:last-child {
-        border-bottom: 1px solid black;
-    }
-    .main-header {
-        margin: 0 auto;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
-    .box .slogan {
-        padding: 1.5rem;
-        text-align: center;
-        line-height: 4rem;
-    }
-    .box button {
-        
-        margin: 0 auto;
-        width: 80%;
-        font-size: 1rem;
-        padding: 8px 20px;
-        color: black;
-        background: white;
-        border: 1px solid black;
-    }
-    .top-content {
-        flex-direction: column;
-        margin-top: 1rem;
-        margin-left: 0.75rem;
-        padding-bottom: 1rem;
-    }
-
-    .top-content .box {
-        width: 100%;
-        padding-top: 1rem;
-        margin-bottom: 2.75rem;
-    }
-    .middle-img {
-        max-width: 460px;
-    }
-    .bottom-content {
-        flex-direction: column;
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-        padding-bottom: 3rem;
-    }
-    .bottom-content .box {
-        width: 100%; 
-    }
-    .bottom-content .box-2 {
-        margin-top: 4.5rem;
-        margin-bottom: 4.5rem;
-    }
-    .bottom-content .box-3 {
-        padding-bottom: 0;
-    }
-    footer {
-        padding-top: 30px;
-    }
-    
-    footer .contact-info {
-        padding-top: 5px;
-        padding-left: 1.2rem;
-    }
-    
-    .legal p {
-        margin: 38px 0;
-        text-align: center;
-    }
-} 
-
+@media(min-width: 1024px) {
+	/* body {
+		min-width: 100vw;
+	} */
+	header .nav-wrapper {
+		flex-direction: row;
+		position: relative;
+	}
+	header .nav-wrapper .main-nav {
+		padding-right: calc(200px + 6rem);
+		align-items: center;
+		justify-content: space-around;
+	}
+	header .nav-wrapper .main-nav a {
+		padding: 2.75rem 3rem 0 3rem;
+	}
+	header .nav-wrapper .nav-logo {
+		position: absolute;
+		right: 0;
+		margin: 0 auto;
+		text-align: right;
+		padding: 2rem 3rem;
+	}
+	header .main-header {
+		min-width: 100vw;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	header .main-header .slogan button {
+		width: 40%;
+	}
+	header .main-header .header-img {
+		display: flow-root;
+	}
+	header .main-header .slogan, .main-header .header-img {
+		width: 30%;
+	}
+	main .top-content, main .bottom-content {
+		flex-direction: row;
+		padding: 2rem;
+		margin: 0 1rem;
+	}
+}
