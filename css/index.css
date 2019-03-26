@@ -154,3 +154,8 @@ footer {
 	margin: 0 auto;
 	text-align: center;
 }
+
+Tablet Sizing
+@media media (min-width: 800px) {
+	
+}
