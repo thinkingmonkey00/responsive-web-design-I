@@ -62,12 +62,12 @@ h1, h2, h3, h4, h5 {
 
 body {
 	max-width: 500px;
-	min-width: 100vw;
+	min-width: 90vw;
 	margin: 0 auto;
 }
 
 header {
-	max-width: 100vw;
+	max-width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -156,7 +156,7 @@ footer {
 
 @media all and (min-width: 800px) {
 	body {
-		min-width: 100vw;
+		max-width: 100vw;
 	}
 	header {
 		display: flex;
@@ -211,5 +211,18 @@ footer {
 	}
 	.bottom-content {
 		border-bottom: 2px solid black;
+	}
+}
+@media all and (min-width: 1024px) {
+	header {
+		flex-direction: row;
+	}
+	.nav-logo {
+		margin: 0 auto;
+		text-align: right;
+		padding: 1rem;
+	}
+	.main-header .header-img {
+		display: flow-root;
 	}
 }
